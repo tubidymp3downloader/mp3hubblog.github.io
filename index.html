@@ -8,8 +8,7 @@
   <title>Tubidy Music & Video Hub – Search, Stream, Download MP3/MP4</title>
 
   <meta name="title" content="Tubidy Music & Video Hub – Search, Stream, Download MP3/MP4">
-  <meta name="description"
-    content="Tubidy is a simple online tool to search, play and download MP3 songs and MP4 videos for free. Fast speed, clean interface, and mobile-friendly experience.">
+  <meta name="description" content="Tubidy is a simple online tool to search, play and download MP3 songs and MP4 videos for free. Fast speed, clean interface, and mobile-friendly experience.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/196970695?v=4">
@@ -78,11 +77,29 @@
       color: #0d6efd;
     }
   </style>
+    <style>
+  /* Fix header but keep container width */
+  .fixed-header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1140px; /* same as Bootstrap container */
+    z-index: 9999;
+  }
+
+  /* Prevent content from hiding behind header */
+  body {
+    padding-top: 80px; /* adjust height according to header height */
+  }
+</style>
 </head>
 
  <!-- Navigation -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark container">
+  <header class="fixed-header-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
       <a class="navbar-brand" href="#">Tubidy – MP3 & MP4 Hub</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
@@ -95,8 +112,9 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
-  </header><!-- Main Container -->
+    </div>
+  </nav>
+</header><!-- Main Container -->
   <section class="container py-5">
 
     <h1 class="text-center">Tubidy – Fast MP3 & MP4 Download Tool</h1>
